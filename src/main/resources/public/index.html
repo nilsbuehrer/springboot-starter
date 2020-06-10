@@ -11,13 +11,13 @@
 				syso("> Running ...");
 				
 				city = document.getElementById("inputLocation").value;
-				pathogen = document.getElementById("inputPathogen").value;
+				endorser = document.getElementById("inputPathogen").value;
 				
 				var query;
-				if (city && pathogen)	{
-					query = "infections/" + city + "/" + pathogen;
+				if (city && endorser)	{
+					query = "infections/" + city + "/" + endorser;
 				} else	{
-					alert("No location or pathogen was entered - listing all persons");
+					alert("No location or endorser was entered - listing all persons");
 					query = "persons";
 				}
 
@@ -64,7 +64,7 @@
 				<div class="form-group">
 					<label for="inputPathogen">Pathogen</label>
 					<input type="text" class="form-control" id="inputPathogen" aria-describedby="inputHelp" placeholder="Enter Pathogen">
-					<small id="inputHelp" class="form-text text-muted">Please enter a pathogen, e.g. I69228</small>
+					<small id="inputHelp" class="form-text text-muted">Please enter a endorser, e.g. I69228</small>
 				</div>
 				<button type="button" class="btn btn-primary" onclick="go()">Go :-)</button>
 			</form>

@@ -41,10 +41,10 @@ CREATE TABLE `infection` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `pathogen`
+-- Table structure for table `endorser`
 --
 
-CREATE TABLE `pathogen` (
+CREATE TABLE `endorser` (
   `id` bigint(20) NOT NULL,
   `icd10` varchar(255) DEFAULT NULL,
   `incubation` int(11) NOT NULL
@@ -75,9 +75,9 @@ ALTER TABLE `infection`
   ADD KEY `FKq3ih115p7inib3i27iqxiln60` (`person_id`);
 
 --
--- Indexes for table `pathogen`
+-- Indexes for table `endorser`
 --
-ALTER TABLE `pathogen`
+ALTER TABLE `endorser`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -97,9 +97,9 @@ ALTER TABLE `infection`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `pathogen`
+-- AUTO_INCREMENT for table `endorser`
 --
-ALTER TABLE `pathogen`
+ALTER TABLE `endorser`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT;
 
 --

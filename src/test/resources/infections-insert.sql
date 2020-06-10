@@ -175,10 +175,10 @@ INSERT INTO `infection` (`id`, `location`, `time`, `pathogen_id`, `person_id`) V
 (144, 'Celje', 1578398302, 10, 34);
 
 --
--- Dumping data for table `pathogen`
+-- Dumping data for table `endorser`
 --
 
-INSERT INTO `pathogen` (`id`, `icd10`, `incubation`) VALUES
+INSERT INTO `endorser` (`id`, `icd10`, `incubation`) VALUES
 (1, 'Y36450S', 17),
 (2, 'T84318A', 5),
 (3, 'S52009F', 13),
