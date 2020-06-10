@@ -1,7 +1,9 @@
 package ch.zhaw.springboot.entities;
 
 import javax.persistence.*;
-import java.util.Date;
+import java.sql.Date;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 public class Endorsement {
@@ -17,6 +19,8 @@ public class Endorsement {
 	private Endorser endorser;
 	@ManyToOne
 	private Endorsee endorsee;
+	@ManyToMany(mappedBy = "endorsements")
+	private List<Skill> skills = new ArrayList<Skill>();
 
 	public Endorsement(String level, Date date,
 					   Endorser endorser, Endorsee endorsee) {
@@ -43,5 +47,9 @@ public class Endorsement {
 
 	public Endorsee getEndorsee() {
 		return this.endorsee;
+	}
+
+	public List<Skill> getSkills() {
+		return skills;
 	}
 }

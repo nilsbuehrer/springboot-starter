@@ -3,24 +3,18 @@ package ch.zhaw.springboot.entities;
 import javax.persistence.*;
 
 @Entity
-public class Endorsee {
+public class Endorsee extends User {
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long id;
+	private int score;
 
-	private String industry;
-
-
-	public Endorsee(String industry) {
-		this.industry = industry;
+	public Endorsee(int score) {
+		this.score = score;
 	}
 
 	public Endorsee() {
 	}
 
-	public String getIndustry() {
-		return this.industry;
+	public int getScore() {
+		return score;
 	}
-
 }

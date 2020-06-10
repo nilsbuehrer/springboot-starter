@@ -1,6 +1,10 @@
 package ch.zhaw.springboot.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 public class Skill {
@@ -9,20 +13,25 @@ public class Skill {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 
-	private String area;
+	private String description;
 
 	@ManyToMany
-	private Endorsement endorsement;
+	@JsonIgnore
+	private List<Endorsement> endorsements = new ArrayList<Endorsement>();
 
-	public Skill(String area) {
-		this.area = area;
+	public Skill(String description) {
+		this.description = description;
 	}
 
 	public Skill() {
 	}
 
-	public String getArea() {
-		return this.area;
+
+	public List<Endorsement> getEndorsements() {
+		return endorsements;
 	}
 
+	public String getDescription() {
+		return description;
+	}
 }

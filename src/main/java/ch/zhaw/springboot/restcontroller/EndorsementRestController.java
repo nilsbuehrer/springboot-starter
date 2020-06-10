@@ -19,7 +19,7 @@ public class EndorsementRestController {
 	@Autowired
 	private EndorsementRepository repository;
 
-	@RequestMapping(value = "/endorsements", method = RequestMethod.GET)
+	@RequestMapping(value = "endorsements/endorsements", method = RequestMethod.GET)
 	public ResponseEntity<List<Endorsement>> getEndorsements() {
 		List<Endorsement> result = this.repository.findAll();
 
@@ -30,7 +30,7 @@ public class EndorsementRestController {
 		}
 	}
 
-	@RequestMapping(value = "/endorsements/{endorsementId}", method = RequestMethod.GET)
+	@RequestMapping(value = "endorsements/endorsements/{endorsementId}", method = RequestMethod.GET)
 	public ResponseEntity<Optional<Endorsement>> getEndorsementById(@PathVariable Long endorsementId) {
 		Optional<Endorsement> result = this.repository.findById(endorsementId);
 
